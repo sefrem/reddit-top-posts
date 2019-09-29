@@ -1,0 +1,14 @@
+.item {
+    border: 1px solid black;
+}
+.content {
+    display: flex;
+    flex-flow: row wrap;
+}
+.item {
+    flex-basis: 20%
+}
+.inputRange {
+    width: 400px;
+    margin-bottom: 15px;
+}
