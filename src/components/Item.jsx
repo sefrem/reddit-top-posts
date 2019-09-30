@@ -2,7 +2,6 @@ import React from "react";
 
 export default class Item extends React.PureComponent {
   render() {
-    console.log("render");
     const { data } = this.props;
     return (
       <div className="item">

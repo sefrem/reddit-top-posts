@@ -63,17 +63,9 @@ export class App extends React.Component {
     return (
       <div>
         <h1>Top Commented</h1>
-        <div>
-          <p>Current filter {minComments} </p>
-          <button
-            type="button"
-            style={{ marginBottom: "15px" }}
-            onClick={this.autoRefresh}
-          >
-            {enableAutoRefresh ? "Stop" : "Start"} auto-refresh
-          </button>
-        </div>
-
+        
+          <p>Current filter: {minComments} </p>
+          
         <input
           className="inputRange"
           type="range"
@@ -82,6 +74,15 @@ export class App extends React.Component {
           min={0}
           max={500}
         />
+        <div>
+        <button
+            className={enableAutoRefresh? "button_active button_refresh" : "button_refresh"}
+            type="button"
+            onClick={this.autoRefresh}
+          >
+            {enableAutoRefresh ? "Stop" : "Start"} auto-refresh
+          </button>
+          </div>
 
         <div className="content">
           {isLoading ? (
